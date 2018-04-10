@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css"
+          rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Card generator</title>
+</head>
+<body>
+<div id="first-set" class="settings-form">
+    <label>FIRST SET</label>
+    <p>Vyber obrázek (URL/Upload):</p>
+    <input type="text" class="url-first-set"><br>
+    <input name="image" type='file' onchange="readURLpicture(this);"/>
+    <p>Vyber vlajku (URL/Upload):</p>
+    <input type="text" class="url-first-set-flag"><br>
+    <input name="image" type='file' onchange="readURLflag(this);"/>
+    <p>Jméno</p>
+    <input type="text" class="name"/>
+    <p>Podnadpis</p>
+    <input type="text" class="subtitle"/>
+    <div class="first image-preview-wrap">
+        <div class="image-preview">
+            <img src="img/Logo.png" alt="" class="logo">
+            <img src="img/background.jpg" class="first-preview-img">
+            <img src="" alt="" id="first-preview-img">
+            <img src="" class="first-preview-img-flag">
+            <h1 class="image-name"></h1>
+            <p class="image-subtitle"></p>
+        </div>
+        <button type="button" class="first-set-button">
+            Stáhnout
+        </button>
+    </div>
+</div>
+<div id="second-set" class="settings-form">
+    <label>SECOND SET</label>
+    <p>NADPIS</p>
+    <input type="text" class="message-box-title"/>
+    <p>TELO</p>
+    <textarea class="message-box-content"></textarea>
+    <form class="message-form">
+
+    </form>
+    <div class="second image-preview-wrap">
+        <div class="image-preview">
+            <img src="img/Logo.png" alt="" class="logo">
+            <img src="img/background.jpg" class="second-preview-img">
+            <h1 class="image-title"></h1>
+            <p class="image-content"></p>
+        </div>
+        <button type="button" class="second-set-button">
+            Stáhnout
+        </button>
+    </div>
+</div>
+
+<div class="first-set-wrapper">
+    <img src="img/Logo.png" alt="" class="logo">
+    <img src="img/background.jpg" class="second-preview-img">
+    <img src="" alt="" id="first-img">
+    <img src="" class="first-preview-img-flag">
+    <h1 class="first-set-image-name"></h1>
+    <p class="first-set-image-subtitle"></p>
+</div>
+
+<div class="second-set-wrapper">
+    <img src="img/Logo.png" alt="" class="logo">
+    <img src="img/background.jpg" class="second-preview-img">
+    <h1 class="second-set-image-title"></h1>
+    <p class="second-set-image-content"></p>
+</div>
+</body>
+</html>
