@@ -59,7 +59,7 @@ $('.url-first-set').change(function () {
         html2canvas($('.first-set-wrapper'), {
             logging: true,
             allowTaint: true,
-            // useCORS: true,
+            useCORS: true,
             onrendered: function(canvas) {
                 // var myImage = canvas.toDataURL('image/png');
                 // $('.lightbox').fadeIn(200);
@@ -77,7 +77,7 @@ $('.url-first-set').change(function () {
         html2canvas($('.second-set-wrapper'), {
             logging: true,
             allowTaint: true,
-            // useCORS: true,
+            useCORS: true,
             onrendered: function(canvas) {
                 // var myImage = canvas.toDataURL('image/png');
                 // $('.lightbox').fadeIn(200);

@@ -8,23 +8,35 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
     <script type="text/javascript" src="index.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Card generator</title>
 </head>
 <body>
 <div id="first-set" class="settings-form">
-    <label>FIRST SET</label>
-    <p>Vyber obrázek (URL/Upload):</p>
-    <input type="text" class="url-first-set"><br>
-    <input name="image" type='file' onchange="readURLpicture(this);"/>
-    <p>Vyber vlajku (URL/Upload):</p>
-    <input type="text" class="url-first-set-flag"><br>
-    <input name="image" type='file' onchange="readURLflag(this);"/>
-    <p>Jméno</p>
-    <input type="text" class="name"/>
-    <p>Podnadpis</p>
-    <input type="text" class="subtitle"/>
+    <div class="form-wrapper form-group">
+        <h1>FIRST SET</h1>
+        <label>Vyber obrázek (Upload):</label>
+        <!--<input type="text" class="url-first-set"><br>-->
+        <input name="image" type='file' onchange="readURLpicture(this);"/>
+        <label>Vyber vlajku (Upload):</label>
+        <!--<input type="text" class="url-first-set-flag"><br>-->
+        <input name="image" type='file' onchange="readURLflag(this);"/>
+        <label for="name">Jméno</label>
+        <input type="text" class="name form-control" id="name"/><br>
+        <label for="subtitle">Podnadpis</label>
+        <input type="text" class="subtitle form-control" id="subtitle"/>
+    </div>
     <div class="first image-preview-wrap">
         <div class="image-preview">
             <img src="img/Logo.png" alt="" class="logo">
@@ -34,20 +46,20 @@
             <h1 class="image-name"></h1>
             <p class="image-subtitle"></p>
         </div>
-        <button type="button" class="first-set-button">
+        <button type="button" class="btn btn-primary first-set-button">
             Stáhnout
         </button>
     </div>
 </div>
-<div id="second-set" class="settings-form">
-    <label>SECOND SET</label>
-    <p>NADPIS</p>
-    <input type="text" class="message-box-title"/>
-    <p>TELO</p>
-    <textarea class="message-box-content"></textarea>
-    <form class="message-form">
 
-    </form>
+<div id="second-set" class="settings-form">
+    <div class="form-wrapper">
+        <h1>SECOND SET</h1>
+        <label>NADPIS</label>
+        <input type="text" class="message-box-title form-control"/><br>
+        <label>TELO</label>
+        <textarea class="message-box-content form-control"></textarea>
+    </div>
     <div class="second image-preview-wrap">
         <div class="image-preview">
             <img src="img/Logo.png" alt="" class="logo">
@@ -55,12 +67,18 @@
             <h1 class="image-title"></h1>
             <p class="image-content"></p>
         </div>
-        <button type="button" class="second-set-button">
+        <button type="button" class="btn btn-primary second-set-button">
             Stáhnout
         </button>
     </div>
 </div>
 
+<div>
+    <h1></h1>
+</div>
+<br>
+<br>
+<br>
 <div class="first-set-wrapper">
     <img src="img/Logo.png" alt="" class="logo">
     <img src="img/background.jpg" class="second-preview-img">
