@@ -185,12 +185,34 @@ body{
 }
 
 .second{
-    margin-top: 138px;
+    margin-top: 43px;
 }
 
 #second-set textarea{
-    width: 80%;
-    height: 80px;
+    width: 90%;
+    height: 150px;
+    resize: none;
+}
+
+table{
+    width: 100%;
+}
+
+tr{
+    height: 200px;
+}
+
+td{
+    height: 200px;
+    padding: 0;
+}
+
+td:first-child{
+    width: 80% ;
+}
+
+td:last-child{
+    width: 100%;
 }
 
 label{

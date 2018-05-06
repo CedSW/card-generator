@@ -54,8 +54,20 @@ $('.url-first-set').change(function () {
         return false;
     });
 
+    //change fontsize
+
+    $('#fontSize').change(function () {
+        var previewSize = $('#fontSize').val();
+        var size = parseInt(previewSize) * 2.4;
+        $('.image-content').css('font-size', previewSize + 'px');
+        $('.second-set-image-content').css('font-size', size + 'px');
+    });
+
 // HTML TO PNG
     $('.first-set-button').on('click', function(){
+        var title1 = $('#name').val();
+        var subtitle1 = $('#subtitle').val();
+        var filename1 = title1 +'-'+ subtitle1 +'-1';
         html2canvas($('.first-set-wrapper'), {
             logging: true,
             allowTaint: true,
@@ -66,7 +78,7 @@ $('.url-first-set').change(function () {
                 // $('.new-image').attr('src', myImage).fadeIn(200);
                 var a = document.createElement('a');
                 a.href = canvas.toDataURL("image/png");
-                a.download = 'filename.jpg';
+                a.download = filename1 +'.jpg';
                 a.click();
             }
 
@@ -74,6 +86,9 @@ $('.url-first-set').change(function () {
     });
 
     $('.second-set-button').on('click', function(){
+        var title1 = $('#name').val();
+        var subtitle1 = $('#subtitle').val();
+        var filename1 = title1 +'-'+ subtitle1 +'-2';
         html2canvas($('.second-set-wrapper'), {
             logging: true,
             allowTaint: true,
@@ -84,7 +99,7 @@ $('.url-first-set').change(function () {
                 // $('.new-image').attr('src', myImage).fadeIn(200);
                 var a = document.createElement('a');
                 a.href = canvas.toDataURL("image/png");
-                a.download = 'filename.jpg';
+                a.download = filename1 +'.jpg';
                 a.click();
             }
 
