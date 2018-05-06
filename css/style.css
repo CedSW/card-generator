@@ -1,6 +1,6 @@
 body{
     font-family: 'Roboto', sans-serif;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .lightbox{
     display: none;
@@ -55,18 +55,27 @@ body{
     color: white;
 }
 
-.image-content{
+.image-content-wrapper{
     position: absolute;
     top: 20%;
     left: 0;
     right: 0;
     font-size: 15px;
     color: yellow;
-    width: 85%;
     margin: auto;
     display: block;
     height: 80%;
     word-wrap: break-word;
+}
+
+.image-content{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) ;
+    width: 85%;
 }
 
 .first-preview-img{
@@ -236,18 +245,28 @@ h1{
     text-align: center;
 }
 
-.second-set-image-content{
+.second-set-image-content-wrapper{
     position: absolute;
     top: 20%;
     left: 0;
     right: 0;
-    font-size: 35px;
-    color: yellow;
-    width: 85%;
     margin: auto;
     display: block;
-    height: 100%;
+    height: 80%;
     word-wrap: break-word;
+}
+
+.second-set-image-content{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) ;
+    width: 85%;
+    font-size: 35px;
+    color: yellow;
+
 }
 
 .second-set-image-title{
